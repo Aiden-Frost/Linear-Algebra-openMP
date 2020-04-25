@@ -41,20 +41,22 @@ int lu(int n,float a[n][n+1]){
             }
         }
     }
-    printf("\n L :=\n");
+/*    printf("\n L :=\n");
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             printf("%f ",L[i][j]);
         }
         printf("\n");
     }
-    printf("\n U :=\n");
+*/
+/*    printf("\n U :=\n");
    for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             printf("%f ",a[i][j]);
         }
         printf("\n");
     } 
+*/
     return 1;    
 }
 
@@ -92,20 +94,22 @@ int lu_p(int n,float b[n][n+1]){
             }
         }
     }
-    printf("\n L :=\n");
+/*    printf("\n L :=\n");
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             printf("%f ",L[i][j]);
         }
         printf("\n");
     }
-    printf("\n U :=\n");
+*/
+/*    printf("\n U :=\n");
    for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             printf("%f ",b[i][j]);
         }
         printf("\n");
     } 
+*/
     return x;   
 }
 
@@ -124,16 +128,16 @@ int main(){
         }
     }
 
-   struct timespec start, end; 
+   struct timespec start, end,start1,end1; 
     clock_gettime(CLOCK_REALTIME, &start);
     lu_p(n,a);
     clock_gettime(CLOCK_REALTIME, &end);
     printf("\nTime spent on LU_Decomposition for %d variables in parallel: %lf\n",n,
             time_elapsed(start, end));
-    clock_gettime(CLOCK_REALTIME, &start);
+    clock_gettime(CLOCK_REALTIME, &start1);
     lu(n,b);
-    clock_gettime(CLOCK_REALTIME, &end);
+    clock_gettime(CLOCK_REALTIME, &end1);
     printf("\nTime spent on LU_Decomposition for %d variables in serial: %lf\n",n,
-            time_elapsed(start, end));
+            time_elapsed(start1, end1));
     return 0;
 }
