@@ -1,0 +1,3 @@
+https://github.com/gmendonca/gaussian-elimination-pthreads-openmp/blob/master/openmp_gauss.c
+https://github.com/puneetar/Parallel-LU-Factorization-with-OpenMP-MPI/blob/master/OpenMP/OpenMP.c
+https://github.com/isislovecruft/ctgrind-valgrind/blob/master/drd/tests/omp_matinv.c
